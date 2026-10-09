@@ -212,9 +212,6 @@ add r12,r11
 
 we add 0x3c to the dll base to get pe header and theb add 0x88 to get EXPORT_ADDRESD_TABLE.So having a pointer to EAT now we can use to get a list of all the functions exported by kernel32.dll.
 EXPORT_ADDRESS_TABLE contains fields such as number of functions at offset 0x10,address of function at offset 0x1C,address of names at offset 0x20,address of ordinal names at offset 0x24
-```
-![EAT](windbg)
-```
 so we use all those in finding a functionas i did in the walk.asm and so on.
 
 
